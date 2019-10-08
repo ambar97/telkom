@@ -32,14 +32,18 @@
               <p>Karyawan</p>
             </a>
           </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="./typography.html">
+          <li class="nav-item <?php if ($this->uri->segment('1')=='DataRating'): ?>
+              active
+          <?php endif ?>">
+            <a class="nav-link" href="<?php echo base_url('DataRating') ?>">
               <i class="material-icons">library_books</i>
               <p>Data Rating</p>
             </a>
           </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="./icons.html">
+          <li class="nav-item <?php if ($this->uri->segment('1')=='DataPrimer'): ?>
+              active
+          <?php endif ?>">
+            <a class="nav-link" href="<?php echo base_url('DataPrimer') ?>">
               <i class="material-icons">bubble_chart</i>
               <p>Data Primer</p>
             </a>

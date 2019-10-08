@@ -19,28 +19,25 @@
                   
                   <option class="disable">Pilih Karyawan</option>
                   <?php foreach ($karyawan->result() as $key): ?>
-                    <optgroup><?php echo $key->nama ?></optgroup>
+                    <option value="<?php $key->id_karyawan ?>"><?php echo $key->nama ?></option>
                   <?php endforeach ?>
                 </select>
               <div class="form-group">
-                <label for="examplePasswords" class="bmd-label-floating"> Posisi Kerja *</label>
+                <label for="examplePasswords" class="bmd-label-floating"> Username *</label>
                 <input type="text" class="form-control" id="examplePasswords" required="true" name="password">
               </div>
               <div class="form-group">
-                <label for="examplePasswords" class="bmd-label-floating"> Shift Kerja *</label>
-                <input type="text" class="form-control" id="examplePasswords" required="true" name="password">
+                <label for="examplePasswords" class="bmd-label-floating"> Password *</label>
+                <input type="password" class="form-control" id="examplePasswords" required="true" name="password">
               </div>
               <div class="form-group">
-                <label for="examplePasswords" class="bmd-label-floating"> Alamat *</label>
-                <input type="text" class="form-control" id="examplePasswords" required="true" name="password">
-              </div>
-              <div class="form-group">
-                <label for="examplePasswords" class="bmd-label-floating"> No Telp *</label>
-                <input type="text" class="form-control" id="examplePasswords" required="true" name="password">
-              </div>
-              <div class="form-group">
-                <label for="examplePasswords" class="bmd-label-floating"> e-mail *</label>
-                <input type="email" class="form-control" id="examplePasswords" required="true" name="password">
+                <label for="examplePasswords" class="bmd-label-floating"> Kategori User *</label>
+                <select class="form-control custom-select" data-placeholder="Choose a Category" tabindex="1" name="jabatan_k">
+                  <option>Pilih Kategori</option>
+                  <option>Public</option>
+                  <option>Karyawan</option>
+                  <option>Service</option>
+                </select>
               </div>
               <div class="category form-category">* Required fields</div>
             </div>

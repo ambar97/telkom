@@ -17,7 +17,7 @@ class Karyawan extends CI_Controller {
 		$this->load->view('insert/karyawan');	
 	}
 	public function goet(){
-		$where = array('id_karyawan'=>$this->uri->segment('2'));
+		$where = array('id_karyawan'=>$this->uri->segment('3'));
 		$data['datane'] = $this->M_model->selectwhere('data_karyawan',$where);
 		$this->load->view('update/u_karyawan',$data);	
 	}
