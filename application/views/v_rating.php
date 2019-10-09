@@ -19,19 +19,21 @@
  										<th>No</th>
  										<th>Nama Karyawan</th>
  										<th>Point</th>
- 										<th class="disabled-sorting text-right">Actions</th>
+ 										<!-- <th class="disabled-sorting text-right">Actions</th> -->
  									</tr>
  								</thead>
  								<tbody>
+ 									<?php $no=1; foreach ($rating as $key) { ?>
  										<tr>
- 											<td></td>
- 											<td class="text-danger"></td>
- 											<td></td>
- 											<td class="text-right">
+ 											<td><?php echo $no++; ?></td>
+ 											<td class="text-danger"><?php echo $key->nama; ?></td>
+ 											<td><?php echo $key->points; ?></td>
+ 											<!-- <td class="text-right">
  												<a href="" title="edit" class="btn btn-link btn-warning btn-just-icon edit" ><i class="material-icons">dvr</i></a>
  												<a href="" title="hapus" onclick="javascript: return confirm('Anda Yakin Akan Menghapus ?')" class="btn btn-link btn-danger btn-just-icon remove"><i class="material-icons">close</i></a>
- 											</td>
+ 											</td> -->
  										</tr>
+ 										<?php } ?>
  								</tbody>
  							</table>
  						</div>

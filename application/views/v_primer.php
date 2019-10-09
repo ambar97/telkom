@@ -26,18 +26,20 @@
  									</tr>
  								</thead>
  								<tbody>
+ 									<?php $no=1; foreach ($primer as $key) { ?>
  										<tr>
- 											<td></td>
- 											<td class="text-danger"></td>
- 											<td></td>
- 											<td></td>
- 											<td></td>
- 											<td></td>
+ 											<td><?php echo $no++; ?></td>
+ 											<td class="text-danger"><?php echo $key->nama; ?></td>
+ 											<td><?php echo $key->lokasi_1; ?>,<?php echo $key->lokasi_2; ?></td>
+ 											<td><?php echo $key->jumlah_jarak; ?></td>
+ 											<td><?php echo $key->lat; ?></td>
+ 											<td><?php echo $key->waktu_gangguan; ?></td>
  											<td class="text-right">
  												<a href="" title="edit" class="btn btn-link btn-warning btn-just-icon edit" ><i class="material-icons">dvr</i></a>
  												<a href="" title="hapus" onclick="javascript: return confirm('Anda Yakin Akan Menghapus ?')" class="btn btn-link btn-danger btn-just-icon remove"><i class="material-icons">close</i></a>
  											</td>
  										</tr>
+ 									<?php } ?>
  								</tbody>
  							</table>
  						</div>

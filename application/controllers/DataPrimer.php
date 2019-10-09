@@ -5,6 +5,7 @@ class DataPrimer extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('v_primer');
+		$data['primer']=$this->M_model->select('data_primer')->result();
+		$this->load->view('v_primer',$data);
 	}
 }
