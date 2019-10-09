@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.1
+-- version 4.8.5
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Oct 01, 2019 at 10:41 AM
--- Server version: 10.1.33-MariaDB
--- PHP Version: 7.2.6
+-- Host: localhost
+-- Generation Time: Oct 09, 2019 at 04:05 AM
+-- Server version: 10.1.38-MariaDB
+-- PHP Version: 7.3.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -74,6 +74,13 @@ CREATE TABLE `data_primer` (
   `waktu_gangguan` time NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
+--
+-- Dumping data for table `data_primer`
+--
+
+INSERT INTO `data_primer` (`id_primer`, `nama`, `lokasi_1`, `lokasi_2`, `jumlah_jarak`, `lat`, `waktu_gangguan`) VALUES
+(1, 'asas', 'asas', 'asasa', 34, 'asa', '00:24:00');
+
 -- --------------------------------------------------------
 
 --
@@ -85,6 +92,13 @@ CREATE TABLE `data_rating` (
   `id_karyawan` int(5) NOT NULL,
   `points` int(3) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `data_rating`
+--
+
+INSERT INTO `data_rating` (`id_rating`, `id_karyawan`, `points`) VALUES
+(1, 2, 5);
 
 -- --------------------------------------------------------
 
@@ -143,14 +157,32 @@ ALTER TABLE `data_karyawan`
   MODIFY `id_karyawan` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
+-- AUTO_INCREMENT for table `data_primer`
+--
+ALTER TABLE `data_primer`
+  MODIFY `id_primer` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `data_rating`
+--
+ALTER TABLE `data_rating`
+  MODIFY `id_rating` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `idUser` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `idUser` int(4) NOT NULL AUTO_INCREMENT;
 
 --
 -- Constraints for dumped tables
 --
+
+--
+-- Constraints for table `data_rating`
+--
+ALTER TABLE `data_rating`
+  ADD CONSTRAINT `data_rating_ibfk_1` FOREIGN KEY (`id_karyawan`) REFERENCES `data_karyawan` (`id_karyawan`);
 
 --
 -- Constraints for table `user`
