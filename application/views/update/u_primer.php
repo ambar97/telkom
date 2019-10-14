@@ -10,34 +10,41 @@
               <div class="card-icon">
                 <i class="material-icons">contacts</i>
               </div>
-              <h4 class="card-title">Edit Data Karayawan</h4>
+              <h4 class="card-title">Edit Data Primer</h4>
             </div>
             <div class="card-body ">
               <?php foreach ($priemr->result() as $key): ?>
               <div class="form-group">
-                <label for="exampleEmails" class="bmd-label-floating"> Nama Karyawan *</label>
-                <input type="hidden" name="id_karyawan" value="<?php echo $key->id_karyawan ?>">
+                <label for="exampleEmails" class="bmd-label-floating"> Nama  *</label>
+                <input type="hidden" name="id_karyawan" value="<?php echo $key->id_primer ?>">
                 <input type="text" class="form-control" value="<?php echo $key->nama ?>" required="true" name="nama" required="">
               </div>
-              <div class="form-group">
-                <label for="examplePasswords" class="bmd-label-floating"> Posisi Kerja *</label>
-                <input type="text" class="form-control" value="<?php echo $key->posisi_kerja?>" required="true" name="posisi" required="">
+              <div class="row">
+                <div class="form-group col-md-6">
+                  <label for="examplePasswords" class="bmd-label-floating"> Lokasi 1 *</label>
+                  <input type="text" class="form-control" value="<?php echo $key->lokasi_1?>" required="true" name="posisi" required="">
+                </div>
+                <div class="form-group col-md-6">
+                <label for="examplePasswords" class="bmd-label-floating"> Lokasi 2 *</label>
+                <input type="text" class="form-control" value="<?php echo $key->lokasi_2?>" required="true" name="posisi" required="">
+              </div>
               </div>
               <div class="form-group">
-                <label for="examplePasswords" class="bmd-label-floating"> Shift Kerja *</label>
-                <input type="text" class="form-control" value="<?php echo $key->shift_kerja?>" required="true" name="shift" required="">
+                <label for="examplePasswords" class="bmd-label-floating"> Jenis Kabel *</label>
+                <select required="" class="form-control custom-select" data-placeholder="Choose a Category" name="jenis">
+                  <option class="disable">Pilih Jenis Kabel</option>
+                  <option>Aerial</option>
+                  <option>Duct</option>
+                  <option>Direct Burried</option>
+                </select>
               </div>
               <div class="form-group">
-                <label for="examplePasswords" class="bmd-label-floating"> Alamat *</label>
-                <input type="text" class="form-control" value="<?php echo $key->Alamat?>" required="true" name="alamat" required="">
+                <label for="examplePasswords" class="bmd-label-floating"> Panjang *</label>
+                <input type="text" class="form-control" value="<?php echo $key->panjang?>" required="true" name="alamat" required="">
               </div>
               <div class="form-group">
-                <label for="examplePasswords" class="bmd-label-floating"> No Telp *</label>
-                <input type="text" class="form-control" value="<?php echo $key->telp ?>" required="true" name="telp" required="">
-              </div>
-              <div class="form-group">
-                <label for="examplePasswords" class="bmd-label-floating"> e-mail *</label>
-                <input type="email" class="form-control" value="<?php echo $key->email ?>" required="true" name="email" required="">
+                <label for="examplePasswords" class="bmd-label-floating"> Ruas *</label>
+                <input type="text" class="form-control" value="<?php echo $key->ruas?>" required="true" name="alamat" required="">
               </div>
               <?php endforeach ?>
               <div class="category form-category">* Required fields</div>

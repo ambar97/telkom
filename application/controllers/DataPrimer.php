@@ -27,7 +27,8 @@ class DataPrimer extends CI_Controller {
 		header('location:'.base_url('DataPrimer'));
 	}
 	public function ubah(){
-		$data['priemr'] = $this->M_model->select('data_primer');
+		$where = array('id_primer'=>$this->uri->segment('3'));
+		$data['priemr'] = $this->M_model->selectwhere('data_primer',$where);
 		$this->load->view('update/u_primer',$data);
 	}
 }
