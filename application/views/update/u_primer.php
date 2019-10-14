@@ -14,11 +14,6 @@
             </div>
             <div class="card-body ">
               <?php foreach ($priemr->result() as $key): ?>
-              <div class="form-group">
-                <label for="exampleEmails" class="bmd-label-floating"> Nama  *</label>
-                <input type="hidden" name="id_karyawan" value="<?php echo $key->id_primer ?>">
-                <input type="text" class="form-control" value="<?php echo $key->nama ?>" required="true" name="nama" required="">
-              </div>
               <div class="row">
                 <div class="form-group col-md-6">
                   <label for="examplePasswords" class="bmd-label-floating"> Lokasi 1 *</label>

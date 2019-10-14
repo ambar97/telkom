@@ -13,17 +13,13 @@
               <h4 class="card-title">Tambah Data Primer</h4>
             </div>
             <div class="card-body ">  
-              <div class="form-group">
-                <label for="examplePasswords" class="bmd-label-floating"> Nama *</label>
-                <input type="text" class="form-control" id="examplePasswords" required="true" name="nama">
-              </div>
               <div class="row">
               <div class="form-group col-md-6">
-                <label for="examplePasswords" class="bmd-label-floating"> Lokasi 2 *</label>
+                <label for="examplePasswords" class="bmd-label-floating"> Lokasi 1 *</label>
                 <input type="text" class="form-control" id="examplePasswords" required="true" name="lk1">
               </div>
               <div class="form-group col-md-6">
-                <label for="examplePasswords" class="bmd-label-floating"> Lokasi 1 *</label>
+                <label for="examplePasswords" class="bmd-label-floating"> Lokasi 2 *</label>
                 <input type="text" class="form-control" id="examplePasswords" required="true" name="lk2">
               </div>
               </div>
