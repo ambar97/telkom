@@ -20,7 +20,7 @@
  								<thead>
  									<tr>
  										<th>No</th>
- 										<th>Nama</th>
+ 										<!-- <th>Nama</th> -->
  										<th>Lokasi</th>
  										<th>Jenis Kabel</th>
  										<th>Panjang</th>
@@ -32,7 +32,7 @@
  									<?php $no=1; foreach ($primer as $key) { ?>
  										<tr>
  											<td><?php echo $no++; ?></td>
- 											<td class="text-danger"><?php echo $key->nama; ?></td>
+ 											<!-- <td class="text-danger"><?php echo $key->nama; ?></td> -->
  											<td><i class="text-success"><?php echo $key->lokasi_1; ?></i> -> <i class="text-warning"> <?php echo $key->lokasi_2; ?></i></td>
  											<td><?php echo $key->jenis_kabel; ?></td>
  											<td><?php echo $key->panjang; ?></td>
