@@ -7,7 +7,10 @@
  				<div class="card">
  					<div class="card-header card-header-danger">
  						<h4 class="card-title " style="font-weight: bold;">Tabel Data Primer</h4>
- 						<p class="card-category"> Tabel ini akan <span style="font-weight: bold;">Automatis Update</span> Ketika user melakukan pengiriman data</p>
+ 						<p class="card-category"> Klik <span style="font-weight: bold;">Tambah Data Primer</span> untuk menambahkan data baru</p>
+ 						<div style="float: right;">
+ 							<a class="btn btn-info" href="<?php echo base_url('DataPrimer/tambah') ?>">Tambah Data Primer</a>
+ 						</div>
  					</div>
  					<div class="card-body">
  						<div class="toolbar">
@@ -30,13 +33,13 @@
  										<tr>
  											<td><?php echo $no++; ?></td>
  											<td class="text-danger"><?php echo $key->nama; ?></td>
- 											<td><?php echo $key->lokasi_1; ?>,<?php echo $key->lokasi_2; ?></td>
- 											<td><?php echo $key->jumlah_jarak; ?></td>
- 											<td><?php echo $key->lat; ?></td>
- 											<td><?php echo $key->waktu_gangguan; ?></td>
+ 											<td><i class="text-success"><?php echo $key->lokasi_1; ?></i> -> <i class="text-warning"> <?php echo $key->lokasi_2; ?></i></td>
+ 											<td><?php echo $key->jenis_kabel; ?></td>
+ 											<td><?php echo $key->panjang; ?></td>
+ 											<td><?php echo $key->ruas; ?></td>
  											<td class="text-right">
  												<a href="" title="edit" class="btn btn-link btn-warning btn-just-icon edit" ><i class="material-icons">dvr</i></a>
- 												<a href="" title="hapus" onclick="javascript: return confirm('Anda Yakin Akan Menghapus ?')" class="btn btn-link btn-danger btn-just-icon remove"><i class="material-icons">close</i></a>
+ 												<a href="<?php echo base_url('DataPrimer/hapus/'.$key-> id_primer) ?>" title="hapus" onclick="javascript: return confirm('Anda Yakin Akan Menghapus ?')" class="btn btn-link btn-danger btn-just-icon remove"><i class="material-icons">close</i></a>
  											</td>
  										</tr>
  									<?php } ?>
