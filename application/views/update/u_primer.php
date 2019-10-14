@@ -4,7 +4,7 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-12">
-        <form id="LoginValidation" action="<?php echo base_url('Karyawan/edit') ?>" method="post">
+        <form id="LoginValidation" action="<?php echo base_url('DataPrimer/edit') ?>" method="post">
           <div class="card ">
             <div class="card-header card-header-rose card-header-icon">
               <div class="card-icon">
@@ -16,12 +16,13 @@
               <?php foreach ($priemr->result() as $key): ?>
               <div class="row">
                 <div class="form-group col-md-6">
+                  <input type="hidden" name="idP" value="<?php echo $key->id_primer ?>">
                   <label for="examplePasswords" class="bmd-label-floating"> Lokasi 1 *</label>
-                  <input type="text" class="form-control" value="<?php echo $key->lokasi_1?>" required="true" name="posisi" required="">
+                  <input type="text" class="form-control" value="<?php echo $key->lokasi_1?>" required="true" name="lk1" required="">
                 </div>
                 <div class="form-group col-md-6">
                 <label for="examplePasswords" class="bmd-label-floating"> Lokasi 2 *</label>
-                <input type="text" class="form-control" value="<?php echo $key->lokasi_2?>" required="true" name="posisi" required="">
+                <input type="text" class="form-control" value="<?php echo $key->lokasi_2?>" required="true" name="lk2" required="">
               </div>
               </div>
               <div class="form-group">
@@ -35,11 +36,11 @@
               </div>
               <div class="form-group">
                 <label for="examplePasswords" class="bmd-label-floating"> Panjang *</label>
-                <input type="text" class="form-control" value="<?php echo $key->panjang?>" required="true" name="alamat" required="">
+                <input type="text" class="form-control" value="<?php echo $key->panjang?>" required="true" name="panjang" required="">
               </div>
               <div class="form-group">
                 <label for="examplePasswords" class="bmd-label-floating"> Ruas *</label>
-                <input type="text" class="form-control" value="<?php echo $key->ruas?>" required="true" name="alamat" required="">
+                <input type="text" class="form-control" value="<?php echo $key->ruas?>" required="true" name="ruas" required="">
               </div>
               <?php endforeach ?>
               <div class="category form-category">* Required fields</div>

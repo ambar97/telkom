@@ -31,4 +31,16 @@ class DataPrimer extends CI_Controller {
 		$data['priemr'] = $this->M_model->selectwhere('data_primer',$where);
 		$this->load->view('update/u_primer',$data);
 	}
+	public function edit(){
+		$where = array('id_primer'=>$this->input->post('idP'));
+		$data = array('lokasi_1' => $this->input->post('lk1'),
+					'lokasi_2'=> $this->input->post('lk2'),
+					'jenis_kabel'=>$this->input->post('jenis'),
+					'panjang'=>$this->input->post('panjang'),
+					'ruas'=>$this->input->post('ruas'));
+		// die(var_dump($where));
+		$this->M_model->update('data_primer',$data,$where);
+		header('location:'.base_url('DataPrimer'));
+	}
+
 }
