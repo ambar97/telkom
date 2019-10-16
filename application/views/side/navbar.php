@@ -49,7 +49,7 @@
             </a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="./map.html">
+            <a class="nav-link" href="<?php echo base_url('Maps') ?>">
               <i class="material-icons">location_ons</i>
               <p>Maps</p>
             </a>
