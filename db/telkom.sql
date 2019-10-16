@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.5
+-- version 4.8.1
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: Oct 14, 2019 at 09:07 AM
--- Server version: 10.1.38-MariaDB
--- PHP Version: 7.3.2
+-- Host: 127.0.0.1
+-- Generation Time: Oct 15, 2019 at 04:14 AM
+-- Server version: 10.1.33-MariaDB
+-- PHP Version: 7.2.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -30,8 +30,16 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `admin` (
   `id_admin` int(5) NOT NULL,
-  `nama_admin` varchar(100) COLLATE utf8_unicode_ci NOT NULL
+  `username` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `password` varchar(999) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `admin`
+--
+
+INSERT INTO `admin` (`id_admin`, `username`, `password`) VALUES
+(1, 'admin', '21232f297a57a5a743894a0e4a801fc3');
 
 -- --------------------------------------------------------
 
@@ -161,11 +169,18 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`idUser`, `idKaryawan`, `tgl_daftar`, `status`, `username`, `password`, `kategori_user`) VALUES
-(3, 2, '2019-10-11', 'Off', 's', '03c7c0ace395d80182db07ae2c30f034', 'public');
+(6, 2, '2019-10-15', 'Off', 'aaaaaaaaa', '74b87337454200d4d33f80c4663dc5e5', 'public'),
+(7, 1, '2019-10-15', 'Off', 'admin', '21232f297a57a5a743894a0e4a801fc3', 'service');
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `admin`
+--
+ALTER TABLE `admin`
+  ADD PRIMARY KEY (`id_admin`);
 
 --
 -- Indexes for table `data_karyawan`
@@ -198,6 +213,12 @@ ALTER TABLE `user`
 --
 
 --
+-- AUTO_INCREMENT for table `admin`
+--
+ALTER TABLE `admin`
+  MODIFY `id_admin` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT for table `data_karyawan`
 --
 ALTER TABLE `data_karyawan`
@@ -219,7 +240,7 @@ ALTER TABLE `data_rating`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `idUser` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `idUser` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- Constraints for dumped tables

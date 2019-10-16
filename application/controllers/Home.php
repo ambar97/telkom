@@ -5,6 +5,10 @@ class Home extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('v_home');
+		if(!$this->session->userdata('status') == 'login'){
+			redirect('Login');
+		}else{
+			$this->load->view('v_home');
+		}
 	}
 }

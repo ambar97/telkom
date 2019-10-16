@@ -8,7 +8,7 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-4 col-md-6 col-sm-8 ml-auto mr-auto">
-            <form class="form" method="" action="#">
+            
               <div class="card card-login card-hidden">
                 <div class="card-header card-header-rose text-center">
                   <h4 class="card-title">Login</h4>
@@ -16,7 +16,7 @@
                 </div>
                 <div class="card-body ">
                   <p class="card-description text-center">Masuk Disini</p>
-                  <form method="POST" action="">
+                  <form class="form" method="POST" action="<?php echo base_url('Login/aksi_login') ?>">
                   <span class="bmd-form-group">
                     <div class="input-group">
                       <div class="input-group-prepend">
@@ -24,7 +24,7 @@
                           <i class="material-icons">face</i>
                         </span>
                       </div>
-                      <input type="text" class="form-control" placeholder="First Name..." name="username">
+                      <input type="text" class="form-control" required="" placeholder="First Name..." name="username">
                     </div>
                   </span>
                   <span class="bmd-form-group">
@@ -34,13 +34,13 @@
                           <i class="material-icons">lock_outline</i>
                         </span>
                       </div>
-                      <input type="password" class="form-control" placeholder="Password..." name="password">
+                      <input type="password" class="form-control" required="" placeholder="Password..." name="password">
                     </div>
                   </span>
-                  </form>
                 </div>
                 <div class="card-footer justify-content-center">
-                  <a href="#pablo" class="btn btn-rose btn-link btn-lg">Lets Go</a>
+                  <button type="submit" class="btn btn-rose btn-link btn-lg">Budal</button>
+                  <!-- <a href="" type="submit" class="">Lets Go</a> -->
                 </div>
               </div>
             </form>
