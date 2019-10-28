@@ -1,3 +1,4 @@
+
  <?php $this->load->view("side/head"); ?>
  <?php $this->load->view("side/navbar"); ?>
 

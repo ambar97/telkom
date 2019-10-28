@@ -34,7 +34,7 @@
                         <?php $no=1; foreach ($user as $var): ?>
                         <tr>
                           <td><?php echo $no++; ?></td>
-                          <td><?php echo $var->nama ?></td>
+    b                        <td><?php echo $var->nama ?></td>
                           <td><?php echo $var->tgl_daftar ?></td>
                           <td><?php echo $var->username ?></td>
                           <td><?php echo $var->status ?></td>

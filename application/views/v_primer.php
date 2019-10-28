@@ -39,7 +39,7 @@
  											<td><?php echo $key->ruas; ?></td>
  											<td class="text-right">
  												<a href="<?php echo base_url('DataPrimer/ubah/'.$key->id_primer) ?>" title="edit" class="btn btn-link btn-warning btn-just-icon edit" ><i class="material-icons">dvr</i></a>
- 												<a href="<?php echo base_url('DataPrimer/hapus/'.$key-> id_primer) ?>" title="hapus" onclick="javascript: return confirm('Anda Yakin Akan Menghapus ?')" class="btn btn-link btn-danger btn-just-icon remove"><i class="material-icons">close</i></a>
+ 												<a href="<?php echo base_url('DataPrimer/hapus/'.$key-> id_primer) ?>" title="hapus" onclick="javascript: return confirm('Anda Yakin Akan Menghapus ?')" class="btn btn-link  btn-danger btn-just-icon remove"><i class="material-icons">close</i></a>
  											</td>
  										</tr>
  									<?php } ?>

@@ -29,8 +29,15 @@
           <?php endif ?>">
             <a class="nav-link" href="<?php echo base_url('Karyawan') ?>">
               <i class="material-icons">content_paste</i>
-              <p>Karyawan</p>
+              <p> Data Karyawan</p>
             </a>
+            </li>
+             <li class="nav-item ">
+            <a class="nav-link" href="<?php echo base_url('DataHistory') ?>">
+              <i class="material-icons">library_books</i>
+              <p>Data History</p>
+            </a>
+          </li>
           </li>
           <li class="nav-item <?php if ($this->uri->segment('1')=='DataRating'): ?>
               active
@@ -51,9 +58,8 @@
           <li class="nav-item ">
             <a class="nav-link" href="<?php echo base_url('Maps') ?>">
               <i class="material-icons">location_ons</i>
-              <p>Maps</p>
+              <p>Maps Telkom</p>
             </a>
-          </li>
         </ul>
       </div>
     </div>
@@ -62,7 +68,7 @@
       <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
         <div class="container-fluid">
           <div class="navbar-wrapper">
-            <a class="navbar-brand" href="#pablo">Dashboard</a>
+            <a class="navbar-brand" href="#pablo">TELKOM YOGYAKARTA</a>
           </div>
           <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
             <span class="sr-only">Toggle navigation</span>

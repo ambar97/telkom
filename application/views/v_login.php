@@ -4,7 +4,7 @@
     <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NKDMSK6" height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </noscript>
   <div class="wrapper wrapper-full-page">
-    <div class="page-header login-page header-filter" filter-color="black" style="background-image: url('<?php echo base_url()?>bg.jpg'); background-size: cover; background-position: top center;">
+    <div class="page-header login-page header-filter" filter-color="black" style="background-image: url('<?php echo base_url()?>bgone.jpg'); background-size: cover; background-position: top center;">
       <div class="container">
         <div class="row">
           <div class="col-lg-4 col-md-6 col-sm-8 ml-auto mr-auto">
@@ -39,7 +39,7 @@
                   </span>
                 </div>
                 <div class="card-footer justify-content-center">
-                  <button type="submit" class="btn btn-rose btn-link btn-lg">Budal</button>
+                  <button type="submit" class="btn btn-rose btn-link btn-lg">LOGIN</button>
                   <!-- <a href="" type="submit" class="">Lets Go</a> -->
                 </div>
               </div>
