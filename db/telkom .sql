@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.1
+-- version 4.8.3
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 15, 2019 at 04:14 AM
--- Server version: 10.1.33-MariaDB
--- PHP Version: 7.2.6
+-- Generation Time: Oct 29, 2019 at 06:21 AM
+-- Server version: 10.1.37-MariaDB
+-- PHP Version: 7.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -44,6 +44,61 @@ INSERT INTO `admin` (`id_admin`, `username`, `password`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `data_cacti`
+--
+
+CREATE TABLE `data_cacti` (
+  `nomor` int(3) NOT NULL,
+  `status` int(1) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `data_cacti`
+--
+
+INSERT INTO `data_cacti` (`nomor`, `status`) VALUES
+(1, 1),
+(2, 1),
+(3, 0),
+(4, 1),
+(5, 0),
+(6, 1),
+(7, 0),
+(8, 1),
+(9, 0),
+(10, 1),
+(11, 0),
+(12, 1),
+(13, 0),
+(14, 1),
+(15, 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `data_history`
+--
+
+CREATE TABLE `data_history` (
+  `id_history` int(10) NOT NULL,
+  `lat` double(10,8) NOT NULL,
+  `lng` double(11,8) NOT NULL,
+  `kabel` varchar(10) COLLATE utf8_unicode_ci NOT NULL,
+  `core` varchar(10) COLLATE utf8_unicode_ci NOT NULL,
+  `des` text COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `data_history`
+--
+
+INSERT INTO `data_history` (`id_history`, `lat`, `lng`, `kabel`, `core`, `des`) VALUES
+(29, -7.80307177, 110.36600400, '2', '3', 'Gangguan ada galian'),
+(34, -7.78645470, 110.37462520, '1', '1', 'ganggu');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `data_karyawan`
 --
 
@@ -63,8 +118,40 @@ CREATE TABLE `data_karyawan` (
 --
 
 INSERT INTO `data_karyawan` (`id_karyawan`, `nama`, `posisi_kerja`, `telp`, `shift_kerja`, `Alamat`, `email`, `status_user`) VALUES
-(1, 'Anas Abiem Bahar', 'Pem', '09779', '122', 'Jember', 'abiemassyikin@gmail.com', 0),
 (2, 'Ahmad Gede Pratama', 'Marketing', '1212', '23', 'adaq', 'AAS@GMAIL', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `data_latlng`
+--
+
+CREATE TABLE `data_latlng` (
+  `id` int(11) NOT NULL,
+  `Nama` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
+  `Lat` double NOT NULL,
+  `Lng` double NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `data_latlng`
+--
+
+INSERT INTO `data_latlng` (`id`, `Nama`, `Lat`, `Lng`) VALUES
+(1, 'PAKEM', -7.6673833333333, 110.42034444444),
+(2, 'KALASAN', -7.7634861111111, 110.47414722222),
+(3, 'BANTUL', -7.8926277777778, 110.33554444444),
+(4, 'SLEMAN', -7.7150611111111, 110.35607777778),
+(5, 'WATES', -7.8599138888889, 110.15859722222),
+(6, 'BANGUNTAPAN', -7.8178416666667, 110.40796944444),
+(7, 'KOTABARU', -7.7861027777778, 110.37469722222),
+(8, 'BABARSARI', -7.7803, 110.41238333333),
+(9, 'KENTUNGAN', -7.7403411129463, 110.39251368019),
+(10, 'STO KLATEN', -7.713657288838, 110.59069023317),
+(11, 'STO WONOSARI', -7.967213256662, 110.60302250191),
+(12, 'TRIKORA', -7.8022520938298, 110.36478144096),
+(13, 'PUGERAN', -7.8138098450388, 110.36053407264),
+(14, 'GODEAN', -7.7655713044148, 110.29082792171);
 
 -- --------------------------------------------------------
 
@@ -151,6 +238,30 @@ INSERT INTO `data_rating` (`id_rating`, `id_karyawan`, `points`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `login`
+--
+
+CREATE TABLE `login` (
+  `id` int(5) NOT NULL,
+  `username` varchar(15) COLLATE utf8_unicode_ci NOT NULL,
+  `password` varchar(10) COLLATE utf8_unicode_ci NOT NULL,
+  `nama` varchar(100) COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `login`
+--
+
+INSERT INTO `login` (`id`, `username`, `password`, `nama`) VALUES
+(1, 'admin', 'admin', 'Admin'),
+(2, 'dhanyrf', '123', 'Dhany Rivaldi'),
+(3, 'Alifiah', '123', 'Alifia fia alif'),
+(4, 'Ninis', '123', 'Ninis Masulah'),
+(5, 'a', 'a', 'a');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `user`
 --
 
@@ -165,14 +276,6 @@ CREATE TABLE `user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `user`
---
-
-INSERT INTO `user` (`idUser`, `idKaryawan`, `tgl_daftar`, `status`, `username`, `password`, `kategori_user`) VALUES
-(6, 2, '2019-10-15', 'Off', 'aaaaaaaaa', '74b87337454200d4d33f80c4663dc5e5', 'public'),
-(7, 1, '2019-10-15', 'Off', 'admin', '21232f297a57a5a743894a0e4a801fc3', 'service');
-
---
 -- Indexes for dumped tables
 --
 
@@ -183,10 +286,28 @@ ALTER TABLE `admin`
   ADD PRIMARY KEY (`id_admin`);
 
 --
+-- Indexes for table `data_cacti`
+--
+ALTER TABLE `data_cacti`
+  ADD PRIMARY KEY (`nomor`);
+
+--
+-- Indexes for table `data_history`
+--
+ALTER TABLE `data_history`
+  ADD PRIMARY KEY (`id_history`);
+
+--
 -- Indexes for table `data_karyawan`
 --
 ALTER TABLE `data_karyawan`
   ADD PRIMARY KEY (`id_karyawan`);
+
+--
+-- Indexes for table `data_latlng`
+--
+ALTER TABLE `data_latlng`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `data_primer`
@@ -200,6 +321,12 @@ ALTER TABLE `data_primer`
 ALTER TABLE `data_rating`
   ADD PRIMARY KEY (`id_rating`),
   ADD UNIQUE KEY `id_karyawan` (`id_karyawan`);
+
+--
+-- Indexes for table `login`
+--
+ALTER TABLE `login`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `user`
@@ -219,10 +346,28 @@ ALTER TABLE `admin`
   MODIFY `id_admin` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
+-- AUTO_INCREMENT for table `data_cacti`
+--
+ALTER TABLE `data_cacti`
+  MODIFY `nomor` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+
+--
+-- AUTO_INCREMENT for table `data_history`
+--
+ALTER TABLE `data_history`
+  MODIFY `id_history` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+
+--
 -- AUTO_INCREMENT for table `data_karyawan`
 --
 ALTER TABLE `data_karyawan`
   MODIFY `id_karyawan` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `data_latlng`
+--
+ALTER TABLE `data_latlng`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `data_primer`
@@ -237,10 +382,16 @@ ALTER TABLE `data_rating`
   MODIFY `id_rating` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
+-- AUTO_INCREMENT for table `login`
+--
+ALTER TABLE `login`
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `idUser` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `idUser` int(4) NOT NULL AUTO_INCREMENT;
 
 --
 -- Constraints for dumped tables
