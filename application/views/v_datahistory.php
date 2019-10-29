@@ -21,10 +21,10 @@
  									<tr>
  										<th>id history</th>
  										<!-- <th>Nama</th> -->
- 										<th>Lat</th>
- 										<th>Lng</th>
+ 										<th>Latitude --> Longitude</th>
+ 										<th>Core</th>
  										<th>Kabel</th>
- 										<th>Des</th>
+ 										<th>Deskripsi</th>
  									
  									</tr>
  								</thead>

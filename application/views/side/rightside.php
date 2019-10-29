@@ -21,22 +21,22 @@
         <li class="header-title">Images</li>
         <li class="active">
           <a class="img-holder switch-trigger" href="javascript:void(0)">
-            <img src="<?php echo base_url()?>master/assets/img/sidebar-1.jpg" alt="">
+            <img src="<?php echo base_url()?>master/assets/img/nav.jpg" alt="">
           </a>
         </li>
         <li>
           <a class="img-holder switch-trigger" href="javascript:void(0)">
-            <img src="<?php echo base_url()?>master/assets/img/sidebar-2.jpg" alt="">
+            <img src="<?php echo base_url()?>master/assets/img/nav.jpg" alt="">
           </a>
         </li>
         <li>
           <a class="img-holder switch-trigger" href="javascript:void(0)">
-            <img src="<?php echo base_url()?>master/assets/img/sidebar-3.jpg" alt="">
+            <img src="<?php echo base_url()?>master/assets/img/nav.jpg" alt="">
           </a>
         </li>
         <li>
           <a class="img-holder switch-trigger" href="javascript:void(0)">
-            <img src="<?php echo base_url()?>master/assets/img/sidebar-4.jpg" alt="">
+            <img src="<?php echo base_url()?>master/assets/img/nav.jpg" alt="">
           </a>
         </li>
       </ul>

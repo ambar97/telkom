@@ -1,6 +1,6 @@
 <body class="">
   <div class="wrapper ">
-    <div class="sidebar" data-color="danger" data-background-color="white" data-image="<?php echo base_url()?>master/assets/img/sidebar-1.jpg">
+    <div class="sidebar" data-color="danger" data-background-color="brown" data-image="<?php echo base_url()?>master/assets/img/bg.jpg">
       <div class="logo">
         <a href="<?php echo base_url() ?>" class="simple-text logo-normal">
           TELKOM INDONESIA
@@ -36,7 +36,7 @@
             <a class="nav-link" href="<?php echo base_url('DataHistory') ?>">
               <i class="material-icons">library_books</i>
               <p>Data History</p>
-            </a>
+            </a> 
           </li>
           </li>
           <li class="nav-item <?php if ($this->uri->segment('1')=='DataRating'): ?>
