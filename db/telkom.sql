@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 29, 2019 at 06:21 AM
+-- Generation Time: Oct 31, 2019 at 08:27 AM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 7.2.12
 
@@ -85,16 +85,23 @@ CREATE TABLE `data_history` (
   `lng` double(11,8) NOT NULL,
   `kabel` varchar(10) COLLATE utf8_unicode_ci NOT NULL,
   `core` varchar(10) COLLATE utf8_unicode_ci NOT NULL,
-  `des` text COLLATE utf8_unicode_ci NOT NULL
+  `des` text COLLATE utf8_unicode_ci NOT NULL,
+  `pekerja` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `Image 1` text COLLATE utf8_unicode_ci NOT NULL,
+  `Image 2` text COLLATE utf8_unicode_ci NOT NULL,
+  `Respond` time DEFAULT NULL,
+  `Working` time DEFAULT NULL,
+  `Solving` time DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `data_history`
 --
 
-INSERT INTO `data_history` (`id_history`, `lat`, `lng`, `kabel`, `core`, `des`) VALUES
-(29, -7.80307177, 110.36600400, '2', '3', 'Gangguan ada galian'),
-(34, -7.78645470, 110.37462520, '1', '1', 'ganggu');
+INSERT INTO `data_history` (`id_history`, `lat`, `lng`, `kabel`, `core`, `des`, `pekerja`, `Image 1`, `Image 2`, `Respond`, `Working`, `Solving`) VALUES
+(29, -7.80307177, 110.36600400, '2', '3', 'Gangguan ada galian', '', '', '', NULL, NULL, NULL),
+(34, -7.78645470, 110.37462520, '1', '1', 'ganggu', '', '', '', NULL, NULL, NULL),
+(90, 99.99999999, 999.99999999, '3', '4', 'fdhd', 'gdh', 'fddfghj', 'cvx vc', '29:00:00', '00:29:00', '00:18:00');
 
 -- --------------------------------------------------------
 
@@ -355,7 +362,7 @@ ALTER TABLE `data_cacti`
 -- AUTO_INCREMENT for table `data_history`
 --
 ALTER TABLE `data_history`
-  MODIFY `id_history` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+  MODIFY `id_history` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=91;
 
 --
 -- AUTO_INCREMENT for table `data_karyawan`
