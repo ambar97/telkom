@@ -53,9 +53,35 @@ class User extends CI_Controller {
 			header('location:'.base_url('User'));
 		}
 	}
-
 	public function gous(){
-		$this->load->view('update/u_user');
+		$seg = $this->uri->segment(3);
+		$data['user'] = $this->M_model->select('data_karyawan');
+		$data['data'] = $this->ModelTelkom->select_user_where('idUser',$seg);
+		$this->load->view('update/u_user',$data);
+	}
+
+	public function update(){
+		$where['idUser']=$usnam=$this->input->post('idf');
+		$usnam=$this->input->post('asd');
+		$pas=$this->input->post('password');
+		$kat = $this->input->post('kategori');
+		if ($pas == NULL) {
+			$data = array('username' =>$usnam ,
+							'kategori_user'=>$kat );
+		} else {
+			$data = array('username' =>$usnam ,
+						'password'=>md5($pas),
+						'kategori_user'=>$kat );
+		}
+		$df = $this->M_model->update('user',$data,$where);
+		if ($df >= 0) {
+			$this->session->set_flashdata("Pesan",$this->Core->alert_succes("User Berhasil di diperbarui"));
+			header('location:'.base_url('User'));
+		} else {
+			$this->session->set_flashdata("Pesan",$this->Core->alert_time("User Gagal di perbarui"));
+			header('location:'.base_url('User'));
+		}
+		
 	}
 
 }

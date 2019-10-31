@@ -14,4 +14,12 @@ class ModelTelkom extends CI_Model {
 	$this->db->from('data_rating');
 	return $this->db->get();  	
   } 
+  function select_user_where($a,$b){
+    $this->db->select('user.*,data_karyawan.*');
+          $this->db->join('data_karyawan', 'data_karyawan.id_karyawan = user.idKaryawan');
+          $this->db->from('user');
+          $this->db->where($a,$b);
+          $data=$this->db->get();
+          return $data;
+  }
 }

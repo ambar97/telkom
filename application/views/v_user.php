@@ -40,7 +40,7 @@
                           <td><?php echo $var->status ?></td>
                           <td><?php echo $var->kategori_user?></td>
                           <td class="text-right">
-                            <a href="#" class="btn btn-link btn-warning btn-just-icon edit"><i class="material-icons">dvr</i></a>
+                            <a href="<?php echo base_url('User/gous/'.$var->idUser) ?>" class="btn btn-link btn-warning btn-just-icon edit"><i class="material-icons">dvr</i></a>
                             <a href="<?php echo base_url('User/hapus/'.$var-> idUser) ?>" title="hapus" onclick="javascript: return confirm('Anda Yakin Akan Menghapus ?')" class="btn btn-link btn-danger btn-just-icon remove"><i class="material-icons">close</i></a>
                           </td>
                         </tr>
