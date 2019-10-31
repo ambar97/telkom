@@ -32,7 +32,9 @@
               <p> Data Karyawan</p>
             </a>
             </li>
-             <li class="nav-item ">
+             <li class="nav-item <?php if ($this->uri->segment('1')=='DataHistory'): ?>
+              active
+          <?php endif ?>">
             <a class="nav-link" href="<?php echo base_url('DataHistory') ?>">
               <i class="material-icons">library_books</i>
               <p>Data History</p>
