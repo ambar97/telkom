@@ -22,10 +22,16 @@
  										<th>id history</th>
  										<!-- <th>Nama</th> -->
  										<th>Latitude --> Longitude</th>
- 										<th>Core</th>
+ 										<th>Langitude --> Longitude</th>
  										<th>Kabel</th>
+ 										<th>Core</th>
  										<th>Deskripsi</th>
- 									
+ 										<th>pekerja</th>
+ 										<th>Image 1</th>
+ 										<th>Image 2</th>
+ 										<th>Respond</th>
+ 										<th>Working</th>
+ 										<th>Solving</th>
  									</tr>
  								</thead>
  								<tbody>
@@ -35,9 +41,14 @@
  											<!-- <td class="text-danger"><?php echo $key->nama; ?></td> -->
  											<td><i class="text-success"><?php echo $key->lat; ?></i> -> <i class="text-warning"> <?php echo $key->lng; ?></i></td>
  											<td><?php echo $key->kabel; ?></td>
- 											<td><?php echo $key->core; ?></td>
+ 											< td><?php echo $key->core; ?></td>
  											<td><?php echo $key->des; ?></td>
- 											
+ 											<td><?php echo $key->pekerja; ?></td>
+ 											<td><?php echo $key->Image1; ?></td>
+ 											<td><?php echo $key->Image2; ?></td>
+ 											<td><?php echo $key->Respond; ?></td>
+ 											<td><?php echo $key->Working; ?></td>
+ 											<td><?php echo $key->Solving; ?></td>
  										</tr>
  									<?php } ?>
  								</tbody>

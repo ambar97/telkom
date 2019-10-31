@@ -29,7 +29,13 @@ class DataHistory extends CI_Controller {
 			'lng'=>$this->input->post('lng'),
 			'kabel'=>$this->input->post('kable'),
 			'core'=>$this->input->post('core'),
-			'des'=>$this->input->post('des'));
+			'des'=>$this->input->post('des'),
+			'Pekerja'=>$this->input->post('Pekerja'),
+			'img1'=>$this->input->post('img1'),
+			'img2'=>$this->input->post('img2'),
+			'respond'=>$this->input->post('rspond'),
+			'Working'=>$this->input->post('Working'),
+			'solving'=>$this->input->post('solving'));
 		// die(var_dump($data));
 		$this->M_model->insert('data_history',$data);
 		header('location:'.base_url('DataHistory'));
@@ -49,7 +55,12 @@ class DataHistory extends CI_Controller {
 			'lng'=> $this->input->post('lng'),
 			'kabel'=>$this->input->post('kabel'),
 			'core'=>$this->input->post('core'),
-			'des'=>$this->input->post('des'));
+			'Pekerja'=>$this->input->post('Pekerja'),
+			'img1'=>$this->input->post('img1'),
+			'img2'=>$this->input->post('img2'),
+			'respond'=>$this->input->post('rspond'),
+			'Working'=>$this->input->post('Working'),
+			'solving'=>$this->input->post('solving'));
 		// die(var_dump($where));
 		$this->M_model->update('data_history',$data,$where);
 		header('location:'.base_url('DataHistory'));
