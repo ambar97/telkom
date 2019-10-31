@@ -56,7 +56,7 @@
                       <div class="col-md-12">
                         <div class="form-group">
                           <label class="bmd-label-floating">Password Lama</label>
-                          <input type="password" class="form-control" name="pswlm" required="">
+                          <input type="password" class="form-control" name="pswku" required="">
                         </div>
                       </div>
                     </div>
