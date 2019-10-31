@@ -7,6 +7,7 @@ class Karyawan extends CI_Controller {
 	{
 		parent::__construct();
 		$this->load->model('ModelTelkom');
+		$this->load->model('Core');
 	}
 	public function index()
 	{
@@ -35,8 +36,14 @@ class Karyawan extends CI_Controller {
 	}
 	public function hapus($id){
 		$where = array('id_karyawan'=>$id);
-		$this -> M_model -> delete($where,'data_karyawan');
-		header('location:'.base_url('Karyawan'));
+		$del = $this -> M_model -> delete($where,'data_karyawan');
+		if ($del >= 0) {
+			$this->session->set_flashdata("Pesan",$this->Core->alert_succes("Karyawan Berhasil di hapus"));
+			header('location:'.base_url('Karyawan'));
+		} else {
+			$this->session->set_flashdata("Pesan",$this->Core->alert_time("Karyawan Gagal di hapus"));
+			header('location:'.base_url('Karyawan'));
+		}
 	}
 	public function create(){
 		$data = array('nama'=>$this->input->post('nama'),
@@ -46,8 +53,13 @@ class Karyawan extends CI_Controller {
 			'Alamat'=>$this->input->post('alamat'),
 			'email'=>$this->input->post('email'),
 			'status_user'=>1);
-		// die(var_dump($data));
-		$this->M_model->insert('data_karyawan',$data);
+		$karyawan = $this->M_model->insert('data_karyawan',$data);
+		if ($karyawan >= 0) {
+		$this->session->set_flashdata("Pesan",$this->Core->alert_succes("Karyawan Baru Berhasil di Buat"));
+		} else {
+			$this->session->set_flashdata("Pesan",$this->Core->alert_time("Karyawan Baru Berhasil di Buat"));
+		}
+		
 		redirect(base_url('Karyawan'));
 
 	}
@@ -59,8 +71,12 @@ class Karyawan extends CI_Controller {
 			'shift_kerja'=>$this->input->post('shift'),
 			'Alamat'=>$this->input->post('alamat'),
 			'email'=>$this->input->post('email'));
-		// die(var_dump($data));
-		$this->M_model->update('data_karyawan',$data,$where);
+		$edit = $this->M_model->update('data_karyawan',$data,$where);
+		if ($edit >= 0) {
+			$this->session->set_flashdata("Pesan",$this->Core->alert_succes("Data Karyawan Berhasil di Ubah"));
+		} else {
+			$this->session->set_flashdata("Pesan",$this->Core->alert_time("Data Karyawan Gagal di Ubah"));
+		}
 		redirect(base_url('Karyawan'));
 	}
 }

@@ -40,6 +40,8 @@
   <script src="<?php echo base_url()?>master/assets/js/plugins/bootstrap-notify.js"></script>
   <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
   <script src="<?php echo base_url()?>master/assets/js/material-dashboard.minf066.js?v=2.1.0" type="text/javascript"></script>
+  <script src="<?php echo base_url() ?>sweetalert/sweetalert.min.js"></script>
+     <script src="<?php echo base_url() ?>sweetalert/jquery.sweet-alert.custom.js"></script>
   <!-- Material Dashboard DEMO methods, don't include it in your project! -->
   <script src="<?php echo base_url()?>master/assets/demo/demo.js"></script>
   <script>

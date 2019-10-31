@@ -34,13 +34,12 @@
                         <?php $no=1; foreach ($user as $var): ?>
                         <tr>
                           <td><?php echo $no++; ?></td>
-    b                        <td><?php echo $var->nama ?></td>
+                          <td><?php echo $var->nama ?></td>
                           <td><?php echo $var->tgl_daftar ?></td>
                           <td><?php echo $var->username ?></td>
                           <td><?php echo $var->status ?></td>
                           <td><?php echo $var->kategori_user?></td>
                           <td class="text-right">
-                            <a href="#" class="btn btn-link btn-info btn-just-icon like"><i class="material-icons">favorite</i></a>
                             <a href="#" class="btn btn-link btn-warning btn-just-icon edit"><i class="material-icons">dvr</i></a>
                             <a href="<?php echo base_url('User/hapus/'.$var-> idUser) ?>" title="hapus" onclick="javascript: return confirm('Anda Yakin Akan Menghapus ?')" class="btn btn-link btn-danger btn-just-icon remove"><i class="material-icons">close</i></a>
                           </td>
@@ -62,3 +61,6 @@
 
 <?php $this->load->view('side/rightside') ?>
 <?php $this->load->view('side/js') ?>
+<?php if ($this->session->flashdata()) { ?>
+                        <?php echo $this->session->flashdata('Pesan'); ?>                   
+                    <?php } ?>

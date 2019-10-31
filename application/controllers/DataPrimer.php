@@ -2,7 +2,11 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class DataPrimer extends CI_Controller {
-
+function __construct()
+	{
+		parent::__construct();
+		$this->load->model('Core');
+	}
 	public function index()
 	{
 		if(!$this->session->userdata('status') == 'login'){
@@ -14,7 +18,12 @@ class DataPrimer extends CI_Controller {
 	}
 	public function hapus($id){
 		$where = array('id_primer'=>$id);
-		$this -> M_model -> delete($where,'data_primer');
+		$dgf = $this -> M_model -> delete($where,'data_primer');
+		if ($dgf >= 0) {
+			$this->session->set_flashdata("Pesan",$this->Core->alert_succes("Data Primer berhasil di hapus"));
+		} else {
+			$this->session->set_flashdata("Pesan",$this->Core->alert_time("Data Primer Gagal di hapus"));
+		}
 		header('location:'.base_url('DataPrimer'));
 	}
 	public function tambah(){
@@ -24,14 +33,19 @@ class DataPrimer extends CI_Controller {
 			$this->load->view('insert/primer');
 		}
 	}public function insert(){
-		$data = array('nama'=>$this->input->post('nama'),
+		$data = array(
 			'lokasi_1'=>$this->input->post('lk1'),
 			'lokasi_2'=>$this->input->post('lk2'),
 			'jenis_kabel'=>$this->input->post('jenis'),
 			'panjang'=>$this->input->post('panjang'),
 			'ruas'=>$this->input->post('ruas'));
-		// die(var_dump($data));
-		$this->M_model->insert('data_primer',$data);
+		$nambah = $this->M_model->insert('data_primer',$data);
+		if ($nambah >= 0) {
+			$this->session->set_flashdata("Pesan",$this->Core->alert_succes("Data Primer berhasil di tambah"));
+		} else {
+			$this->session->set_flashdata("Pesan",$this->Core->alert_time("Data Primer Gagal di tambah"));
+		}
+		
 		header('location:'.base_url('DataPrimer'));
 	}
 	public function ubah(){
@@ -50,8 +64,12 @@ class DataPrimer extends CI_Controller {
 			'jenis_kabel'=>$this->input->post('jenis'),
 			'panjang'=>$this->input->post('panjang'),
 			'ruas'=>$this->input->post('ruas'));
-		// die(var_dump($where));
-		$this->M_model->update('data_primer',$data,$where);
+		$ganti = $this->M_model->update('data_primer',$data,$where);
+		if ($ganti >= 0) {
+			$this->session->set_flashdata("Pesan",$this->Core->alert_succes("Data Premier berhasil di ubah"));
+		} else {
+			$this->session->set_flashdata("Pesan",$this->Core->alert_time("Data Premier Gagal di ubah"));
+		}
 		header('location:'.base_url('DataPrimer'));
 	}
 

@@ -8,7 +8,7 @@
       </div>
       <div class="sidebar-wrapper">
         <ul class="nav">
-          <li class="nav-item <?php if ($this->uri->segment('1')==''): ?>
+          <li class="nav-item <?php if ($this->uri->segment('1')=='' || $this->uri->segment('1')=='Home' ) : ?>
               active
           <?php endif ?>">
             <a class="nav-link" href="<?php echo base_url() ?>">
@@ -113,8 +113,8 @@
                   </p>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile">
-                  <a class="dropdown-item" href="#">Profile</a>
-                  <a class="dropdown-item" href="#">Settings</a>
+                  <a class="dropdown-item" href="<?php echo base_url('Profile') ?>">Profile</a>
+                  <!-- <a class="dropdown-item" href="#">Settings</a> -->
                   <div class="dropdown-divider"></div>
                   <a class="dropdown-item" href="<?php echo base_url('Login/logout') ?>">Log out</a>
                 </div>

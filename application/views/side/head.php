@@ -17,4 +17,5 @@
   <link href="<?php echo base_url()?>master/assets/css/material-dashboard.css?v=2.1.1" rel="stylesheet" />
   <!-- CSS Just for demo purpose, don't include it in your project -->
   <link href="<?php echo base_url()?>master/assets/demo/demo.css" rel="stylesheet" />
+  <link href="<?php echo base_url() ?>sweetalert/sweetalert.css" rel="stylesheet" type="text/css">
 </head>

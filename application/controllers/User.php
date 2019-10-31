@@ -6,6 +6,7 @@ class User extends CI_Controller {
 	{
 		parent::__construct();
 		$this->load->model('ModelTelkom');
+		$this->load->model('Core');
 	}
 	function index(){
 		if(!$this->session->userdata('status') == 'login'){
@@ -21,8 +22,15 @@ class User extends CI_Controller {
 	}
 	public function hapus($id){
 		$where = array('idUser'=>$id);
-		$this -> M_model -> delete($where,'user');
-		header('location:'.base_url('User'));
+		$hapus = $this -> M_model -> delete($where,'user');
+		if ($hapus >= 0) {
+			$this->session->set_flashdata("Pesan",$this->Core->alert_succes("User Berhasil di hapus"));
+			header('location:'.base_url('User'));
+		} else {
+			$this->session->set_flashdata("Pesan",$this->Core->alert_time("User Gagal di hapus"));
+			header('location:'.base_url('User'));
+		}
+		
 	}
 	public function insertD(){
 		$user = $this->input->post('asd');
@@ -36,8 +44,18 @@ class User extends CI_Controller {
 			'password'=>md5($pass),
 			'kategori_user'=>$kategori);
 		// die(var_dump($data));
-		$this->M_model->insert('user',$data);
-		header('location:'.base_url('User'));
+		$rt = $this->M_model->insert('user',$data);
+		if ($rt >= 0) {
+			$this->session->set_flashdata("Pesan",$this->Core->alert_succes("User Berhasil di buat"));
+			header('location:'.base_url('User'));
+		} else {
+			$this->session->set_flashdata("Pesan",$this->Core->alert_time("User Gagal di buat"));
+			header('location:'.base_url('User'));
+		}
+	}
+
+	public function gous(){
+		$this->load->view('update/u_user');
 	}
 
 }
