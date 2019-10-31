@@ -56,3 +56,6 @@
 </div>
 <?php $this->load->view('side/rightside') ?>
 <?php $this->load->view('side/js') ?>
+<?php if ($this->session->flashdata()) { ?>
+                        <?php echo $this->session->flashdata('Pesan'); ?>                   
+                    <?php } ?>
