@@ -44,10 +44,10 @@ class Profile extends CI_Controller {
  		$des = $this->M_model->update('admin',$data,$where);
  		if ($des >= 0) {
  		$this->session->sess_destroy();
- 		$this->session->set_flashdata("Pesan",$this->Core->alert_succes("Password Berhasil dirubah"));
+ 		$this->session->set_flashdata("Pesan",$this->Core->alert_succes("Password Berhasil dirubah, Login kembali !"));
 			redirect(base_url("Login"));	
  		} else {
- 			$this->session->set_flashdata("Pesan",$this->Core->alert_succes("Password Gagal di rubah "));
+ 			$this->session->set_flashdata("Pesan",$this->Core->alert_time("Password Gagal di rubah "));
  			redirect(base_url("Profile"));
  		}	
 	}

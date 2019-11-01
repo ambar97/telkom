@@ -52,14 +52,14 @@
                     <hr>
                     <h4>Perbarui Password </h4>
                     <form method="POST" action="<?php echo base_url('Profile/ubhPsw') ?>">
-                    <div class="row">
+                    <!-- <div class="row">
                       <div class="col-md-12">
                         <div class="form-group">
                           <label class="bmd-label-floating">Password Lama</label>
                           <input type="password" class="form-control" name="pswku" required="">
                         </div>
                       </div>
-                    </div>
+                    </div> -->
                     <div class="row">
                       <div class="col-md-12">
                         <div class="form-group">
@@ -76,7 +76,7 @@
                         </div>
                       </div>
                     </div>
-                    <p><i style="font-weight: bold;">*</i> Jika ingin memperbarui username saja, maka cukup mengisi username dan password lama</p>
+                    <p><i style="font-weight: bold;">*</i> Passtikan anda mengingat password baru yang anda buat</p>
                     <button type="submit" class="btn btn-rose pull-right">Update Password</button>
                     </form>
                     <div class="clearfix"></div>
