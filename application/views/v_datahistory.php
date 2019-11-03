@@ -27,8 +27,8 @@
  										<th>Core</th>
  										<th>Deskripsi</th>
  										<th>pekerja</th>
- 										<th>Image 1</th>
- 										<th>Image 2</th>
+ 										<th>Image1</th>
+ 										<th>Image2</th>
  										<th>Respond</th>
  										<th>Working</th>
  										<th>Solving</th>

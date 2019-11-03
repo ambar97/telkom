@@ -3,7 +3,7 @@
     <div class="sidebar" data-color="danger" data-background-color="brown" data-image="<?php echo base_url()?>master/assets/img/bg.jpg">
       <div class="logo">
         <a href="<?php echo base_url() ?>" class="simple-text logo-normal">
-          TELKOM INDONESIA
+          <img style="height: 70px; width: 100px" src="<?php echo base_url()?>master/assets/img/logo.png" />
         </a>
       </div>
       <div class="sidebar-wrapper">
@@ -70,7 +70,7 @@
       <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
         <div class="container-fluid">
           <div class="navbar-wrapper">
-            <a class="navbar-brand" href="#pablo">TELKOM YOGYAKARTA</a>
+            <a style="font-size: 28px; padding-left: 10px; " class="navbar-brand" href="<?php echo base_url() ?>">TELKOM YOGYAKARTA</a>
           </div>
           <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
             <span class="sr-only">Toggle navigation</span>

@@ -19,15 +19,30 @@
  										<th>No</th>
  										<th>Nama Karyawan</th>
  										<th>Point</th>
+ 										<th>Alamat</th>
+ 										<th>Shift</th>
+ 										<th>Nama Team</th>
+ 										
  										<!-- <th class="disabled-sorting text-right">Actions</th> -->
  									</tr>
  								</thead>
  								<tbody>
  									<?php $no=1; foreach ($rating as $key) { ?>
- 										<tr>
+ 											<tr>
+ 											<td><?php echo $no++; ?></td>
+ 											<td><i class="text-success"><?php echo $key->lat; ?></i> -> <i class="text-warning"> <?php echo $key->lng; ?></i></td>
+ 											<td></td>
+ 											<td><?php echo $key->no; ?></td>
+ 											<td><?php echo $key->namakaryawan; ?></td>
+ 											<td><?php echo $key->point; ?></td>
+ 											<td><?php echo $key->alamat; ?></td>
+ 											<td><?php echo $key->shift; ?></td>
+ 											<td><?php echo $key->nama_team; ?></td>
+ 											
+ 										</tr>
  											<td><?php echo $no++; ?></td>
  											<td class="text-danger"><?php echo $key->nama; ?></td>
- 											<td><?php echo $key->points; ?></td>
+ 											<td><?php echo $key->nama_team; ?></td>
  											<!-- <td class="text-right">
  												<a href="" title="edit" class="btn btn-link btn-warning btn-just-icon edit" ><i class="material-icons">dvr</i></a>
  												<a href="" title="hapus" onclick="javascript: return confirm('Anda Yakin Akan Menghapus ?')" class="btn btn-link btn-danger btn-just-icon remove"><i class="material-icons">close</i></a>
