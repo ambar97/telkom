@@ -87,14 +87,14 @@
               <div class="card card-profile">
                 <div class="card-avatar">
                   <a href="#pablo">
-                    <img class="img" src="<?php echo base_url() ?>master/assets/img/faces/marc.jpg" />
+                    <img class="img" src="<?php echo base_url() ?>master/assets/img/ta.png" />
                   </a>
                 </div>
                 <div class="card-body">
                   <h6 class="card-category text-gray">Admin Telkom</h6>
-                  <h4 class="card-title">Nama Admin</h4>
+                  <h4 class="card-title">Alifiah Umpamanya</h4>
                   <p class="card-description">
-                    Deskripsi admin disini
+                    Admin Sentral Witel Yogyakarta
                   </p>
                   <!-- <a href="#pablo" class="btn btn-rose btn-round">Follow</a> -->
                 </div>

@@ -1,10 +1,10 @@
  <?php $this->load->view("side/head"); ?>
  <body class="off-canvas-sidebar">
   <noscript>
-    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NKDMSK6" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NKDMSK6" height="100%" width="100%" style="display:none;visibility:hidden"></iframe>
   </noscript>
   <div class="wrapper wrapper-full-page">
-    <div class="page-header login-page header-filter" filter-color="black" style="background-image: url('<?php echo base_url()?>bgone.jpg'); background-size: cover; background-position: top center;">
+    <div class="page-header login-page header-filter" filter-color="white" style="background-image: url('<?php echo base_url()?>bglgn.png'); background-size: cover; background-position: top center; background-attachment: fixed;">
       <div class="container">
         <div class="row">
           <div class="col-lg-4 col-md-6 col-sm-8 ml-auto mr-auto">
