@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.1
+-- version 4.8.3
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 31, 2019 at 04:54 PM
--- Server version: 10.1.33-MariaDB
--- PHP Version: 7.2.6
+-- Generation Time: Oct 31, 2019 at 08:27 AM
+-- Server version: 10.1.37-MariaDB
+-- PHP Version: 7.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -87,8 +87,8 @@ CREATE TABLE `data_history` (
   `core` varchar(10) COLLATE utf8_unicode_ci NOT NULL,
   `des` text COLLATE utf8_unicode_ci NOT NULL,
   `pekerja` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
-  `Image1` text COLLATE utf8_unicode_ci NOT NULL,
-  `Image2` text COLLATE utf8_unicode_ci NOT NULL,
+  `Image 1` text COLLATE utf8_unicode_ci NOT NULL,
+  `Image 2` text COLLATE utf8_unicode_ci NOT NULL,
   `Respond` time DEFAULT NULL,
   `Working` time DEFAULT NULL,
   `Solving` time DEFAULT NULL
@@ -98,7 +98,7 @@ CREATE TABLE `data_history` (
 -- Dumping data for table `data_history`
 --
 
-INSERT INTO `data_history` (`id_history`, `lat`, `lng`, `kabel`, `core`, `des`, `pekerja`, `Image1`, `Image2`, `Respond`, `Working`, `Solving`) VALUES
+INSERT INTO `data_history` (`id_history`, `lat`, `lng`, `kabel`, `core`, `des`, `pekerja`, `Image 1`, `Image 2`, `Respond`, `Working`, `Solving`) VALUES
 (29, -7.80307177, 110.36600400, '2', '3', 'Gangguan ada galian', '', '', '', NULL, NULL, NULL),
 (34, -7.78645470, 110.37462520, '1', '1', 'ganggu', '', '', '', NULL, NULL, NULL),
 (90, 99.99999999, 999.99999999, '3', '4', 'fdhd', 'gdh', 'fddfghj', 'cvx vc', '29:00:00', '00:29:00', '00:18:00');
@@ -125,8 +125,7 @@ CREATE TABLE `data_karyawan` (
 --
 
 INSERT INTO `data_karyawan` (`id_karyawan`, `nama`, `posisi_kerja`, `telp`, `shift_kerja`, `Alamat`, `email`, `status_user`) VALUES
-(2, 'Ahmad Gede Pratama', 'Marketing', '1212', '23', 'adaq', 'AAS@GMAIL', 1),
-(5, 'Anas Abiem', 'asas', '33', 'asas', 'asas', 'As@d', 1);
+(2, 'Ahmad Gede Pratama', 'Marketing', '1212', '23', 'adaq', 'AAS@GMAIL', 1);
 
 -- --------------------------------------------------------
 
@@ -284,13 +283,6 @@ CREATE TABLE `user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `user`
---
-
-INSERT INTO `user` (`idUser`, `idKaryawan`, `tgl_daftar`, `status`, `username`, `password`, `kategori_user`) VALUES
-(5, 5, '2019-10-31', 'Off', 'ssssad', '8f60c8102d29fcd525162d02eed4566b', 'karyawan');
-
---
 -- Indexes for dumped tables
 --
 
@@ -376,7 +368,7 @@ ALTER TABLE `data_history`
 -- AUTO_INCREMENT for table `data_karyawan`
 --
 ALTER TABLE `data_karyawan`
-  MODIFY `id_karyawan` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_karyawan` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `data_latlng`
@@ -406,7 +398,7 @@ ALTER TABLE `login`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `idUser` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `idUser` int(4) NOT NULL AUTO_INCREMENT;
 
 --
 -- Constraints for dumped tables

@@ -39,16 +39,15 @@ class Profile extends CI_Controller {
 		
 	}
 	public function ubhPsw(){
-		$where=array('id_admin'=>$this->session->userdata('id'));
+		$paasmd = md5($this->input->post('pswlm'));
+		$where=array('id_admin'=>$this->session->userdata('id'),
+					'password'=>$paasmd);
 		$data=array('password'=>md5($this->input->post('pswny')));
- 		$des = $this->M_model->update('admin',$data,$where);
- 		if ($des >= 0) {
+ 		$this->M_model->update('admin',$data,$where);
  		$this->session->sess_destroy();
- 		$this->session->set_flashdata("Pesan",$this->Core->alert_succes("Password Berhasil dirubah, Login kembali !"));
 			redirect(base_url("Login"));	
- 		} else {
- 			$this->session->set_flashdata("Pesan",$this->Core->alert_time("Password Gagal di rubah "));
- 			redirect(base_url("Profile"));
- 		}	
+			
+			
+		
 	}
 }

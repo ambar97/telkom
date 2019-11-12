@@ -52,14 +52,14 @@
                     <hr>
                     <h4>Perbarui Password </h4>
                     <form method="POST" action="<?php echo base_url('Profile/ubhPsw') ?>">
-                    <!-- <div class="row">
+                    <div class="row">
                       <div class="col-md-12">
                         <div class="form-group">
                           <label class="bmd-label-floating">Password Lama</label>
-                          <input type="password" class="form-control" name="pswku" required="">
+                          <input type="password" class="form-control" name="pswlm" required="">
                         </div>
                       </div>
-                    </div> -->
+                    </div>
                     <div class="row">
                       <div class="col-md-12">
                         <div class="form-group">
@@ -76,7 +76,7 @@
                         </div>
                       </div>
                     </div>
-                    <p><i style="font-weight: bold;">*</i> Passtikan anda mengingat password baru yang anda buat</p>
+                    <p><i style="font-weight: bold;">*</i> Jika ingin memperbarui username saja, maka cukup mengisi username dan password lama</p>
                     <button type="submit" class="btn btn-rose pull-right">Update Password</button>
                     </form>
                     <div class="clearfix"></div>
@@ -87,14 +87,14 @@
               <div class="card card-profile">
                 <div class="card-avatar">
                   <a href="#pablo">
-                    <img class="img" src="<?php echo base_url() ?>master/assets/img/ta.png" />
+                    <img class="img" src="<?php echo base_url() ?>master/assets/img/faces/marc.jpg" />
                   </a>
                 </div>
                 <div class="card-body">
                   <h6 class="card-category text-gray">Admin Telkom</h6>
-                  <h4 class="card-title">Alifiah Umpamanya</h4>
+                  <h4 class="card-title">Nama Admin</h4>
                   <p class="card-description">
-                    Admin Sentral Witel Yogyakarta
+                    Deskripsi admin disini
                   </p>
                   <!-- <a href="#pablo" class="btn btn-rose btn-round">Follow</a> -->
                 </div>
